@@ -9,7 +9,7 @@ const REDIS_PORT=process.env.REDIS_PORT || 6379
 const client = createClient({
   url: `redis://${REDIS_HOST}:${REDIS_PORT}`
 });
-client.on('error', (err) => console.log('Redis Client Error', err));
+client.on('error', (err:any) => console.log('Redis Client Error', err));
 
 
 let taskIncr=0
