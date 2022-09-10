@@ -52,7 +52,7 @@ app.get('/output', async (req: Request, res: Response) => {
   const result = await client.get(`ticket_${ticket}`)
 
   if(result){
-    res.send({"Fibonacci":Number(result)})
+    res.send({"Fibonacci":result})
   }else{
      res.status(404).send('Answer not found')
   }
